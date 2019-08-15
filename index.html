@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/ghpages-materialize.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/prism.css"  media="screen,projection"/>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <div class="section" id="index-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m9">
+                        <h1 class="header center-on-small-only">Laboratorio:</h1>
+                        <h4 class="light red-text text-lighten-4 center-on-small-only">Creación de una aplicación web en el cliente</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">         
+            <div class="row">
+                <div class="col m12">
+                    <h3 class="light">Tema 3 Programación con JavaScript</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Como Incluir JavaScript directamente en el documento HTML </h5>
+                    <pre class=" language-markup">
+                        <code class=" language-markup">      
+<span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://code.jquery.com/jquery-3.2.1.min.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span>
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Declaración de variables, tipos de variables, comentarios en una linea y multilinea</h5>
+                    <pre class=" language-markup">
+                        <code class=" language-markup">
+<span class="token punctuation">/*Declaración de 
+variables*/</span>
+var text1 = 'Vengo de la variable text1 y estoy en comillas SENCILLAS: Escribe un numero entero';
+var text2 = "Vengo de la variable text2 y estoy en comillas DOBLES: Escribe un numero decimal";
+<span class="token punctuation">//Declaración de variables sobre la misma linea</span>
+var numIntPrompt = 0, numFloatPrompt = 0.00, valorBooleano = false;
+var soyUnArray = ["Elmento 1, posición 0", "Elmento 2 posición 1", "Elmento 3 posición 2", "Elmento 4 posición 3"];
+                        </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Obtener valores atra vez de un input</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <form id="subir_numero">
+                        <input type="number"  id="first_text" name="numero" value="">
+                        <label id="text1" for="first_text"></label>
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Obtener
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+                <div class="input-field col s4">
+                    <span id="text1Result"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Obtener valores atra vez de un prompt y hacer una sentecia if else</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col m3">
+                    <button id="lanza_prompt" class="btn waves-effect waves-light" type="button" name="action">Lanza prompt
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field col m3">
+                    <span id="text2Result"></span>
+                </div>
+                <div class="col m8">
+                    <pre class=" language-markup">
+                            <code class=" language-markup">
+<span class="token punctuation">//Codigo que obtiene el valor del prompt</span>
+if (opcion == null || opcion == "") {
+    mensaje = "Has cancelado o introducido un valor vacío";
+} else {
+    mensaje = "Hola vengo de prompt <b>" + opcion + "</b>";
+}
+                            </code>
+                        </pre>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Hacer una ciclo for y lanzar un alert</h5>
+                </div>
+                <div class="row">
+                    <div class="input-field col m3">
+                        <button id="lanza_alert" class="btn waves-effect waves-light" type="button" name="action">Lanza alerts
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <div class="input-field col m8">
+                        <pre class=" language-markup">
+                            <code class=" language-markup">
+<span class="token punctuation">//Codigo que lanza el ciclo for</span>
+for(var i = 1; i <= 3; i++){
+    alert("Soy el mensaje numeró " + i + " del ciclo for ");
+}    
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Bocle for in y recorriendo un array</h5>
+                </div>
+                <div class="row">
+                    <div class="input-field col m3">
+                        <button id="recorrer_array" class="btn waves-effect waves-light" type="button" name="action">Recorrer array
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <div class="input-field col m8">
+                        <pre class=" language-markup">
+                            <code class=" language-markup">
+<span class="token punctuation">//Codigo que lanza el ciclo for</span>
+var soyUnArray = ["Elmento 1, posición 0", "Elmento 2 posición 1", "Elmento 3 posición 2", "Elmento 4 posición 3"];
+for(i in soyUnArray){
+    alert(soyUnArray[i]);
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Ciclo while contando posiciones en un array usando length y recorriendolo</h5>
+                </div>
+                <div class="row">
+                    <div class="input-field col m3">
+                        <button id="recorrer_colores" class="btn waves-effect waves-light" type="button" name="action">Recorrer colores
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <div class="input-field col m8">
+                        <pre class=" language-markup">
+                            <code class=" language-markup">
+<span class="token punctuation">//Codigo que lanza el ciclo while</span>
+var colores=["Rojo", "Verde", "Azul", "Negro"], i = 0; 
+while(i < length.colores  ){
+    alert(colore[i]);
+    i++
+}
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript">
+            var text1 = 'Vengo de la variable text1 y estoy en comillas SENCILLAS: Escribe un numero';
+            var text2 = "Vengo de la variable text2 y estoy en comillas DOBLES: Escribe un numero";
+            document.getElementById('text1').innerHTML = text1;
+            $(document).on("submit", "#subir_numero", function(e){
+                e.preventDefault();
+                $("#text1Result").html("Hola vengo del input de la izquierda <b>" + $("#first_text").val() + "</b>");
+            });
+            $(document).on("click", "#lanza_prompt", function(){
+                var mensaje;
+                var opcion = prompt(text2);
+                if (opcion == null || opcion == "") {
+                    mensaje = "Has cancelado o introducido un valor vacío";
+                } else {
+                    mensaje = "Hola vengo de prompt <b>" + opcion + "</b>";
+                }
+                document.getElementById("text2Result").innerHTML = mensaje;
+            });
+            $(document).on("click", "#lanza_alert", function(){
+                for(var i = 1; i <= 3; i++){
+                    alert("Soy el mensaje numeró " + i + " del ciclo for ");
+                } 
+            });
+            $(document).on("click", "#recorrer_array", function(){
+                var soyUnArray = ["Elmento 1, posición 0", "Elmento 2 posición 1", "Elmento 3 posición 2", "Elmento 4 posición 3"];
+                for(i in soyUnArray){
+                    alert(soyUnArray[i]);
+                }
+            });
+            $(document).on("click", "#recorrer_colores", function(){
+                var colores=["Rojo", "Verde", "Azul", "Negro"], i = 0; 
+                while(i < colores.length  ){
+                    alert(colores[i]);
+                    i++
+                }
+            });
+            
+            
+        </script>
+    </body>
+</html>
