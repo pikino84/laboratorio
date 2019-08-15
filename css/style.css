@@ -1,14 +1,6 @@
-body{
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    background-image: url("../img/compo_super.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-
+#wrapper_herencia {
+    min-height: 400px;
 }
-.center-div{
-    margin: 0 auto;
-    width: 50%;
+.console {
+    width: 70%;
 }

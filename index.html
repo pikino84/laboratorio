@@ -2,14 +2,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Compitación en el cliente web</title>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="css/ghpages-materialize.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="css/prism.css"  media="screen,projection"/>
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+        
     </head>
     <body>
         <div class="section" id="index-banner">
@@ -75,10 +78,22 @@ var soyUnArray = ["Elmento 1, posición 0", "Elmento 2 posición 1", "Elmento 3 
             </div>
             <div class="row">
                 <div class="col m12">
-                    <h5><i class="material-icons">check</i>Obtener valores atra vez de un prompt y hacer una sentecia if else</h5>
+                    <h5><i class="material-icons">check</i>Obtener valores través de un prompt y hacer una sentecia if else </h5>
                 </div>
             </div>
             <div class="row">
+                    <div class="col m12">
+                            <pre class=" language-markup">
+                                    <code class=" language-markup">
+        <span class="token punctuation">//Codigo que obtiene el valor del prompt</span>
+        if (opcion == null || opcion == "") {
+            mensaje = "Has cancelado o introducido un valor vacío";
+        } else {
+            mensaje = "Hola vengo de prompt <b>" + opcion + "</b>";
+        }
+                                    </code>
+                                </pre>
+                        </div>
                 <div class="input-field col m3">
                     <button id="lanza_prompt" class="btn waves-effect waves-light" type="button" name="action">Lanza prompt
                         <i class="material-icons right">send</i>
@@ -87,30 +102,13 @@ var soyUnArray = ["Elmento 1, posición 0", "Elmento 2 posición 1", "Elmento 3 
                 <div class="input-field col m3">
                     <span id="text2Result"></span>
                 </div>
-                <div class="col m8">
-                    <pre class=" language-markup">
-                            <code class=" language-markup">
-<span class="token punctuation">//Codigo que obtiene el valor del prompt</span>
-if (opcion == null || opcion == "") {
-    mensaje = "Has cancelado o introducido un valor vacío";
-} else {
-    mensaje = "Hola vengo de prompt <b>" + opcion + "</b>";
-}
-                            </code>
-                        </pre>
-                </div>
             </div>
             <div class="row">
                 <div class="col m12">
                     <h5><i class="material-icons">check</i>Hacer una ciclo for y lanzar un alert</h5>
                 </div>
                 <div class="row">
-                    <div class="input-field col m3">
-                        <button id="lanza_alert" class="btn waves-effect waves-light" type="button" name="action">Lanza alerts
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                    <div class="input-field col m8">
+                    <div class="input-field col m12">
                         <pre class=" language-markup">
                             <code class=" language-markup">
 <span class="token punctuation">//Codigo que lanza el ciclo for</span>
@@ -120,6 +118,11 @@ for(var i = 1; i <= 3; i++){
                             </code>
                         </pre>
                     </div>
+                    <div class="input-field col m3">
+                        <button id="lanza_alert" class="btn waves-effect waves-light" type="button" name="action">Lanza alerts
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -127,22 +130,23 @@ for(var i = 1; i <= 3; i++){
                     <h5><i class="material-icons">check</i>Bocle for in y recorriendo un array</h5>
                 </div>
                 <div class="row">
-                    <div class="input-field col m3">
-                        <button id="recorrer_array" class="btn waves-effect waves-light" type="button" name="action">Recorrer array
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                    <div class="input-field col m8">
-                        <pre class=" language-markup">
-                            <code class=" language-markup">
+                        <div class="input-field col m12">
+                                <pre class=" language-markup">
+                                    <code class=" language-markup">
 <span class="token punctuation">//Codigo que lanza el ciclo for</span>
 var soyUnArray = ["Elmento 1, posición 0", "Elmento 2 posición 1", "Elmento 3 posición 2", "Elmento 4 posición 3"];
 for(i in soyUnArray){
     alert(soyUnArray[i]);
 }
-                            </code>
-                        </pre>
+                                    </code>
+                                </pre>
+                            </div>
+                    <div class="input-field col m4">
+                        <button id="recorrer_array" class="btn waves-effect waves-light" type="button" name="action">Recorrer array
+                            <i class="material-icons right">send</i>
+                        </button>
                     </div>
+                    
                 </div>
             </div>
             <div class="row">
@@ -150,12 +154,7 @@ for(i in soyUnArray){
                     <h5><i class="material-icons">check</i>Ciclo while contando posiciones en un array usando length y recorriendolo</h5>
                 </div>
                 <div class="row">
-                    <div class="input-field col m3">
-                        <button id="recorrer_colores" class="btn waves-effect waves-light" type="button" name="action">Recorrer colores
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                    <div class="input-field col m8">
+                    <div class="input-field col m12">
                         <pre class=" language-markup">
                             <code class=" language-markup">
 <span class="token punctuation">//Codigo que lanza el ciclo while</span>
@@ -167,49 +166,255 @@ while(i < length.colores  ){
                             </code>
                         </pre>
                     </div>
+                    <div class="input-field col m4">
+                        <button id="recorrer_colores" class="btn waves-effect waves-light" type="button" name="action">Recorrer colores
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>JavaScript orientado a objetos: clases, instancia de clases, herencia y prototype</h5>
+                </div>
+                <div class="row">
+                    <div class="input-field col m12">
+                            <pre class=" language-markup">
+                                <code class=" language-markup">
+<span class="token punctuation">//Creación de <span class="token attr-value">CLASE</span> Animal</span>
+function Animal(nombre, especie, numerodepatas, tienecola) { 
+    <span class="token punctuation">//Variables privadas </span>
+    var _nombreCompleto; var _color; 
+    <span class="token punctuation">// Propiedades </span>
+    this.Nombre = nombre; 
+    this.Especie = especie; 
+    this.NumeroDePatas = numerodepatas; 
+    this.TieneCola = tienecola; 
+    <span class="token punctuation">// Metodos </span>
+    this.setColor = function (color) { 
+        _color = color; 
+    } 
+    this.getColor = function () { 
+        return _color; 
+    } 
+    this.setNombreCompleto = function() { 
+        _nombreCompleto = "Este Animal es un " + this.Nombre + " de la especie de los " + this.Especie; 
+    } 
+    this.getNombreCompleto = function() { 
+        this.setNombreCompleto(); 
+        return _nombreCompleto; 
+    } 
+}
+<span class="token attr-value">//HERENCIA</span>
+<span class="token punctuation">//Clases hija</span> 
+function Vaca(nombre, especie, numerodepatas, tienecola, lecherestante) {   
+    <span class="token attr-value">//INSTACIA DE CLASE</span>
+    Animal.call(this,nombre, especie, numerodepatas, tienecola); 
+    this.LecheRestante = lecherestante; 
+    //Metodos 
+    this.ordenhar = function (litros) { 
+        this.LecheRestante -= litros; 
+    } 
+}
+<span class="token attr-value">//PRTOTYPE</span>
+Vaca.prototype = new Animal(); 
+<span class="token punctuation">//Clases hija</span> 
+function Tigre(nombre, especie, numerodepatas, tienecola, victimas) {
+    <span class="token attr-value">//INSTACIA DE CLASE</span>
+    Animal.call(this,nombre, especie, numerodepatas, tienecola); 
+    this.Victimas = victimas; 
+    // Metodos 
+    this.comerpersonas = function (victimas) { 
+        this.Victimas += victimas; 
+    } 
+}
+<span class="token attr-value">//PRTOTYPE</span>
+Tigre.prototype = new Animal();
+//<span class="token attr-value">SE INSTANCIA LA CLASE Y SE CREA EL OBJETO</span> Creo una vaca y la ordeño
+var animal = new Vaca("Antonia", "Rumiantes", 4, true, 50);
+//<span class="token attr-value">SE INSTANCIA LA CLASE Y SE CREA EL OBJETO</span> Creo un tigre
+var animal2 = new Tigre("Pedro", "Felinos", 4, true, 0);
+                                </code>
+                            </pre>
+                            <a href="http://yagoperez.com/creacion_de_clases_con_javascript_y_herencia/">Fuente: Creación de clases con javascript y herencia</a>
+                        </div>
+                    <div class="input-field col m3">
+                        <button id="herencia" class="btn waves-effect waves-light" type="button" name="action">Llamar la funcion Animal
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <div class="input-field col m9">
+                        <div id="wrapper_herencia"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h3 class="light">Tema 4 Modelo de objetos del docuento DOM</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Recorriedo el DOM: documentElement, childNodes, firstChild, lastChild, nextSibling, previousSibling, parentNode</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <pre class=" language-markup">
+                        <code class=" language-markup">
+<span class="token punctuation">//Se almacena todo el DOM en objeto_html</span>
+var objeto_html = document.documentElement;
+var objeto_head = objeto_html.childNodes[0];
+var objeto_body = objeto_html.childNodes[1];
+var objeto_firts = objeto_html.firstChild;
+var objeto_last = objeto_html.lastChild;
+var objeto_nextSibling = objeto_head.nextSibling;
+var objeto_previousSibling = objeto_body.previousSibling;
+var objeto_parentNode = objeto_head.parentNode;
+                        </code>
+                    </pre>
+                </div>
+                <div class="input-field col m12">
+                    <span class="token attr-value">Usa la consola del navegador</span>
+                </div>
+                <div class="input-field col m12">
+                    <img class="console" src="imagenes/consola.gif">
+                </div>
+                <div class="input-field col m4">
+                    <button id="lanzar_dom" class="btn waves-effect waves-light" type="button" name="action">documentElement (html)
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field col m4">
+                    <button id="lanzar_head" class="btn waves-effect waves-light" type="button" name="action">childNodes[0] (head)
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field col m4">
+                    <button id="firts_child" class="btn waves-effect waves-light" type="button" name="action">firstChild 
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field col m4">
+                    <button id="last_child" class="btn waves-effect waves-light" type="button" name="action">lastChild
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field col m4">
+                    <button id="next_child" class="btn waves-effect waves-light" type="button" name="action">nextSibling
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field col m4">
+                    <button id="previousSibling" class="btn waves-effect waves-light" type="button" name="action">previousSibling
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field col m4">
+                    <button id="parentNode" class="btn waves-effect waves-light" type="button" name="action">parentNode
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Accediendo  a los atributos Id y Classname mediante el uso de getAttribute</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <pre class=" language-markup">
+                        <code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span>p<span class="token attr-name"> id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>parrafo<span class="token punctuation">"</span></span><span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>soyUnaClase<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Este texto esta esta dentro de una etiqueta p <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+var p = document.getElementById("parrafo");
+var elId = p.getAttribute("id");
+var parrafos = document.getElementsByTagName("p");
+var primerParrafo = parrafos[0];
+var parrafo = document.getElementById("parrafo");
+                        </code>
+                    </pre>
+                </div>
+                <div class="col m12">
+                    <p id="parrafo" class="soyUnaClase" style="display: none">Este texto esta esta dentro de una etiqueta p</p>
+                </div>
+                <div class="input-field col m12">
+                    <span class="token attr-value">Usa la consola del navegador</span>
+                </div>
+                <div class="input-field col m3">
+                    <button id="get_id" class="btn waves-effect waves-light" type="button" name="action">Ontener ID
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field col m3">
+                    <button id="get_tagname" class="btn waves-effect waves-light" type="button" name="action">Ontener P
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <div class="input-field col m3">
+                    <button id="get_class" class="btn waves-effect waves-light" type="button" name="action">Ontener Clase
+                        <i class="material-icons right">send</i>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h3 class="light">Tema 4 Frameworks y librerías en JavaScript: jQuery</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Accediendo  a los atributos Id y Classname mediante el uso de getAttribute</h5>
                 </div>
             </div>
         </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/tema_1.js"></script>
         <script type="text/javascript">
-            var text1 = 'Vengo de la variable text1 y estoy en comillas SENCILLAS: Escribe un numero';
-            var text2 = "Vengo de la variable text2 y estoy en comillas DOBLES: Escribe un numero";
-            document.getElementById('text1').innerHTML = text1;
-            $(document).on("submit", "#subir_numero", function(e){
-                e.preventDefault();
-                $("#text1Result").html("Hola vengo del input de la izquierda <b>" + $("#first_text").val() + "</b>");
-            });
-            $(document).on("click", "#lanza_prompt", function(){
-                var mensaje;
-                var opcion = prompt(text2);
-                if (opcion == null || opcion == "") {
-                    mensaje = "Has cancelado o introducido un valor vacío";
-                } else {
-                    mensaje = "Hola vengo de prompt <b>" + opcion + "</b>";
-                }
-                document.getElementById("text2Result").innerHTML = mensaje;
-            });
-            $(document).on("click", "#lanza_alert", function(){
-                for(var i = 1; i <= 3; i++){
-                    alert("Soy el mensaje numeró " + i + " del ciclo for ");
-                } 
-            });
-            $(document).on("click", "#recorrer_array", function(){
-                var soyUnArray = ["Elmento 1, posición 0", "Elmento 2 posición 1", "Elmento 3 posición 2", "Elmento 4 posición 3"];
-                for(i in soyUnArray){
-                    alert(soyUnArray[i]);
-                }
-            });
-            $(document).on("click", "#recorrer_colores", function(){
-                var colores=["Rojo", "Verde", "Azul", "Negro"], i = 0; 
-                while(i < colores.length  ){
-                    alert(colores[i]);
-                    i++
-                }
-            });
+            var objeto_html = document.documentElement;
+            var objeto_head = objeto_html.childNodes[0];
+            var objeto_body = objeto_html.childNodes[1];
+            var objeto_firts = objeto_html.firstChild;
+            var objeto_last = objeto_html.lastChild;
+            var objeto_nextSibling = objeto_head.nextSibling;
+            var objeto_previousSibling = objeto_body.previousSibling;
+            var objeto_parentNode = objeto_head.parentNode;
             
-            
+            $(document).on("click", "#lanzar_dom", function(){
+                console.log(objeto_html);
+            });
+            $(document).on("click", "#lanzar_head", function(){
+                console.log(objeto_head);
+            });
+            $(document).on("click", "#firts_child", function(){
+                console.log(objeto_firts);
+            });
+            $(document).on("click", "#last_child", function(){
+                console.log(objeto_last);
+            });
+            $(document).on("click", "#next_child", function(){
+                console.log(objeto_nextSibling);
+            });
+            $(document).on("click", "#previousSibling", function(){
+                console.log(objeto_previousSibling);
+            });
+            $(document).on("click", "#parentNode", function(){
+                console.log(objeto_parentNode);
+            });
+            $(document).on("click", "#get_id", function(){
+                var p = document.getElementById("parrafo");
+                var elId = p.getAttribute("id");
+                console.log("El ID del la etiqueta p es: " + elId);
+            });
+            $(document).on("click", "#get_tagname", function(){
+                var parrafos = document.getElementsByTagName("p");
+                var primerParrafo = parrafos[0];
+                console.log(primerParrafo);
+            });
+            $(document).on("click", "#get_class", function(){
+                var parrafo = document.getElementById("parrafo");
+                console.log(parrafo.className); // muestra "normal"
+            });
         </script>
     </body>
 </html>
