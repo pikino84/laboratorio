@@ -4,3 +4,28 @@
 .console {
     width: 70%;
 }
+.figura {
+    height: 80px;
+}
+figure.figura {
+    margin: 0px;
+}
+.padre {
+    border:solid #4a148c 2px;
+    color: #4a148c;
+}
+.padre > li {
+    margin: 6px;
+    border:solid #ab47bc 2px;
+    color: #ab47bc;
+}
+.padre > li.hijo{
+    color: #ec407a;
+    border: solid 2px #ec407a;
+}
+.nieto{
+    display: block;
+    margin: 20px;
+    color: #ad1457;
+    border: solid 2px #ad1457;
+}

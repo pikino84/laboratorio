@@ -363,58 +363,155 @@ var parrafo = document.getElementById("parrafo");
             </div>
             <div class="row">
                 <div class="col m12">
-                    <h5><i class="material-icons">check</i>Accediendo  a los atributos Id y Classname mediante el uso de getAttribute</h5>
+                    <h5><i class="material-icons">check</i>Selección por identificador  #identificador </h5>
+                </div>
+                <div class="col m12">
+                    <pre class=" language-markup">
+                        <code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span>div<span class="token attr-name"> id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>cubo_id<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+$("#cubo_id").css("border", "5px solid black");
+                        </code>
+                    </pre>
+                </div>
+                <div class="col m6">
+                    <div id="cubo_id" class="figura purple darken-1"></div>
+                </div>
+                <div class="col m6">
+                    <div class="input-field col m6">
+                        <button id="lanza_selector_id" class="btn waves-effect waves-light" type="button" name="action">Selector ID
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Selección por nombre de la etiqueta (elemento)</h5>
+                </div>
+                <div class="col m12">
+                    <pre class=" language-markup">
+                        <code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span>figure<span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figure</span><span class="token punctuation">&gt;</span></span>
+$("figure").css({"width":"50%"});
+                        </code>
+                    </pre>
+                </div>
+                <div class="col m6">
+                    <figure class="figura  pink darken-1"></figure>
+                </div>
+                <div class="col m6">
+                    <div class="input-field col m6">
+                        <button id="lanza_selector_etiqueta" class="btn waves-effect waves-light" type="button" name="action">Selector etiqueta
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Selección por clase </h5>
+                </div>
+                <div class="col m12">
+                    <pre class=" language-markup">
+                        <code class=" language-markup">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span></span>div<span class="token attr-name"> class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mi_figura<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+$(".mi_figura").css({"width":"80px","border-radius":"50%"});
+                        </code>
+                    </pre>
+                </div>
+                <div class="col m6">
+                    <div class="mi_figura figura  purple lighten-1"></div>
+                </div>
+                <div class="col m6">
+                    <div class="input-field col m6">
+                        <button  class="btn waves-effect waves-light lanza_selector_clase" type="button" name="action">Selector por clase
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12">
+                    <h5><i class="material-icons">check</i>Selección de descendientes (Ascendiente Descendiente), Selección de los hijos (Padre > Hijo), Selección de los hermanos siguientes (Predecesor ~ Hermano), Selección del elemento siguiente (Predecesor + Siguiente)</h5>
+                </div>
+                <div class="col m12">
+                    <pre class=" language-markup">
+                        <code class=" language-markup">
+$(".padre *").css("background", "#ffc0cb");
+$(".padre > *").css("background", "#00b0ff");
+$("li.uno ~ li").css("background", "#a5d6a7");
+$("li.uno + li").css("background", "#ff9800");
+                        </code>
+                    </pre>
+                </div>
+                <div class="col m8">
+                    <ul class="padre">
+                        PADRE con clase padre
+                        <li class="hijo uno">
+                            HIJO 1 (PRIMER HIJO) con clase hijo
+                            <span class="nieto">nieto 1, hijo de la clase hijo </span>
+                            <span class="nieto">nieto 2, hijo de la clase hijo </span>
+                        </li>
+                        <li class="hijo">
+                            HIJO 2 con clase hijo
+                            <span class="nieto">nieto 1, hijo de la clase hijo </span>
+                            <span class="nieto">nieto 2, hijo de la clase hijo </span>
+                        </li>
+                        <li class="hijo">HIJO 3</li>
+                        <li class="hijo">HIJO 4 (ULTIMO HIJO)</li>
+                    </ul>
+                </div>
+                <div class="col m4">
+                    <div class="input-field col m12">
+                        <button  class="btn waves-effect waves-light desendientes" type="button" name="action">Selector desendientes
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <div class="input-field col m12">
+                        <button  class="btn waves-effect waves-light selecthijos" type="button" name="action">Selector hijos
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <div class="input-field col m12">
+                        <button  class="btn waves-effect waves-light selecthermanos" type="button" name="action">Selector hermanos
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                    <div class="input-field col m12">
+                        <button  class="btn waves-effect waves-light selecsiguiente" type="button" name="action">Selector iguiente
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/tema_1.js"></script>
+        <script type="text/javascript" src="js/tema_2.js"></script>
         <script type="text/javascript">
-            var objeto_html = document.documentElement;
-            var objeto_head = objeto_html.childNodes[0];
-            var objeto_body = objeto_html.childNodes[1];
-            var objeto_firts = objeto_html.firstChild;
-            var objeto_last = objeto_html.lastChild;
-            var objeto_nextSibling = objeto_head.nextSibling;
-            var objeto_previousSibling = objeto_body.previousSibling;
-            var objeto_parentNode = objeto_head.parentNode;
+            $(document).on("click", "#lanza_selector_id", function(){
+                $("#cubo_id").css("border", "5px solid black");
+            });
+            $(document).on("click", "#lanza_selector_etiqueta", function(){
+                $("figure").css({"width":"50%"});
+            });
+            $(document).on("click", ".lanza_selector_clase", function(){
+                $(".mi_figura").css({"width":"80px","border-radius":"50%"});
+            });
+            $(document).on("click", ".desendientes", function(){
+                $(".padre *").css("background", "#ffc0cb");
+            });
+            $(document).on("click", ".selecthijos", function(){
+                $(".padre > *").css("background", "#00b0ff");
+            });
+            $(document).on("click", ".selecthermanos", function(){
+                $("li.uno ~ li").css("background", "#a5d6a7");
+            });
+            $(document).on("click", ".selecsiguiente", function(){
+                $("li.uno + li").css("background", "#ff9800");
+            });
             
-            $(document).on("click", "#lanzar_dom", function(){
-                console.log(objeto_html);
-            });
-            $(document).on("click", "#lanzar_head", function(){
-                console.log(objeto_head);
-            });
-            $(document).on("click", "#firts_child", function(){
-                console.log(objeto_firts);
-            });
-            $(document).on("click", "#last_child", function(){
-                console.log(objeto_last);
-            });
-            $(document).on("click", "#next_child", function(){
-                console.log(objeto_nextSibling);
-            });
-            $(document).on("click", "#previousSibling", function(){
-                console.log(objeto_previousSibling);
-            });
-            $(document).on("click", "#parentNode", function(){
-                console.log(objeto_parentNode);
-            });
-            $(document).on("click", "#get_id", function(){
-                var p = document.getElementById("parrafo");
-                var elId = p.getAttribute("id");
-                console.log("El ID del la etiqueta p es: " + elId);
-            });
-            $(document).on("click", "#get_tagname", function(){
-                var parrafos = document.getElementsByTagName("p");
-                var primerParrafo = parrafos[0];
-                console.log(primerParrafo);
-            });
-            $(document).on("click", "#get_class", function(){
-                var parrafo = document.getElementById("parrafo");
-                console.log(parrafo.className); // muestra "normal"
-            });
         </script>
     </body>
 </html>
