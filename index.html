@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Compitación en el cliente web</title>
+        <title>Computación en el cliente web</title>
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
@@ -12,7 +12,7 @@
         <link type="text/css" rel="stylesheet" href="css/ghpages-materialize.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="css/prism.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
-        
+        <link rel="shortcut icon" type="image/png" href="imagenes/previmg.png"/>
     </head>
     <body>
         <div class="section" id="index-banner">
@@ -21,6 +21,7 @@
                     <div class="col s12 m9">
                         <h1 class="header center-on-small-only">Laboratorio:</h1>
                         <h4 class="light red-text text-lighten-4 center-on-small-only">Creación de una aplicación web en el cliente</h4>
+                        <h6 class="light red-text text-lighten-4 center-on-small-only">Desarrolado por: José Francisco Ayapantecalth Cruz</h6>
                     </div>
                 </div>
             </div>
@@ -226,7 +227,7 @@ var animal = new Vaca("Antonia", "Rumiantes", 4, true, 50);
 var animal2 = new Tigre("Pedro", "Felinos", 4, true, 0);
                                 </code>
                             </pre>
-                            <a href="http://yagoperez.com/creacion_de_clases_con_javascript_y_herencia/">Fuente: Creación de clases con javascript y herencia</a>
+                            <a href="http://yagoperez.com/creacion_de_clases_con_javascript_y_herencia/" target="_blank">Fuente: Creación de clases con javascript y herencia</a>
                         </div>
                     <div class="input-field col m3">
                         <button id="herencia" class="btn waves-effect waves-light" type="button" name="action">Llamar la funcion Animal</button>
@@ -263,7 +264,7 @@ var objeto_parentNode = objeto_head.parentNode;
                     </pre>
                 </div>
                 <div class="input-field col m12">
-                    <span class="token attr-value">Usa la consola del navegador</span>
+                    <span class="token attr-value">NOTA: Para visulizar estos ejercicios usa la consola del navegador</span>
                 </div>
                 <div class="input-field col m12">
                     <img class="console" src="imagenes/consola.gif">
@@ -312,7 +313,7 @@ var parrafo = document.getElementById("parrafo");
                     <p id="parrafo" class="soyUnaClase" style="display: none">Este texto esta esta dentro de una etiqueta p</p>
                 </div>
                 <div class="input-field col m12">
-                    <span class="token attr-value">Usa la consola del navegador</span>
+                    <span class="token attr-value">NOTA: Para visulizar estos ejercicios usa la consola del navegador</span>
                 </div>
                 <div class="input-field col m3">
                     <button id="get_id" class="btn waves-effect waves-light" type="button" name="action">Ontener ID</button>
@@ -599,9 +600,24 @@ $(".figura_6").mouseout(function(){
                 <div class="col m12">
                     <pre class=" language-markup">
                         <code class=" language-markup">
-$(".figura_1").click(function(){
-    $(".figura_1").css({"background":"#e1bee7","color":"#fff"});
-});
+//animate
+$(".cuadrado_1").animate({right: '250px',opacity: '0.5',height: '150px',width: '150px'});
+//fadeIn
+$(".cuadrado_2").fadeIn(3000);
+//fadeOut
+$(".cuadrado_3").fadeOut(3000);
+//fadeToggle
+$(".cuadrado_4").fadeToggle('quick');
+//hide
+$(".cuadrado_5").hide('quick');
+//show
+$(".cuadrado_5").show('quick');
+//slideDown
+$(".cuadrado_6").slideDown();
+//slideUp
+$(".cuadrado_6").slideUp();
+//toggle
+$(".cuadrado_7").toggle();
                         </code>
                     </pre>
                 </div>
@@ -614,6 +630,7 @@ $(".figura_1").click(function(){
                             <div class="cuadrado cuadrado_4"></div>
                             <div class="cuadrado cuadrado_5"></div>
                             <div class="cuadrado cuadrado_6"></div>
+                            <div class="cuadrado cuadrado_7"></div>
                         </div>    
                     </div>
                 </div>
@@ -636,142 +653,23 @@ $(".figura_1").click(function(){
                     <div class="input-field col m2">
                         <button  class="btn waves-effect waves-light mostrar" type="button" name="action">show</button>
                     </div>
+                    <div class="input-field col m2">
+                        <button  class="btn waves-effect waves-light slideDown" type="button" name="action">slideDown</button>
+                    </div>
+                    <div class="input-field col m2">
+                        <button  class="btn waves-effect waves-light slideUp" type="button" name="action">slideUp</button>
+                    </div>
+                    <div class="input-field col m2">
+                        <button  class="btn waves-effect waves-light toggle" type="button" name="action">toggle</button>
+                    </div>
                 </div>
             </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript" src="js/tema_1.js"></script>
         <script type="text/javascript" src="js/tema_2.js"></script>
-        <script type="text/javascript">
-            $(document).on("click", "#lanza_selector_id", function(){
-                $("#cubo_id").css("border", "5px solid black");
-            });
-            $(document).on("click", "#lanza_selector_etiqueta", function(){
-                $("figure").css({"width":"50%"});
-            });
-            $(document).on("click", ".lanza_selector_clase", function(){
-                $(".mi_figura").css({"width":"80px","border-radius":"50%"});
-            });
-            $(document).on("click", ".desendientes", function(){
-                $(".padre *").css("background", "#ffc0cb");
-            });
-            $(document).on("click", ".selecthijos", function(){
-                $(".padre > *").css("background", "#00b0ff");
-            });
-            $(document).on("click", ".selecthermanos", function(){
-                $("li.uno ~ li").css("background", "#a5d6a7");
-            });
-            $(document).on("click", ".selecsiguiente", function(){
-                $("li.uno + li").css("background", "#ff9800");
-            });
-            $(document).on("click", ".first", function(){
-                $(".lista li:first").css("background", "#ff9800");
-            });
-            $(document).on("click", ".last", function(){
-                $(".lista li:last").css("background", "#e1bee7");
-            });
-            $(document).on("click", ".even", function(){
-                $(".lista li:even").css("background", "#f8bbd0");
-            });
-            $(document).on("click", ".odd", function(){
-                $(".lista li:odd").css("background", "#bbdefb");
-            });
-            $(document).on("click", ".eq", function(){
-                $(".lista li:eq(3)").css("background", "#b2ebf2");
-            });
-            $(document).on("click", ".gt", function(){
-                $(".lista li:gt(3)").css("background", "#4db6ac");
-            });
-            $(document).on("click", ".lt", function(){
-                $(".lista li:lt(3)").css("background", "#e6ee9c");
-            });
-            $(document).on("click", ".head", function(){
-                $(":header").css("background", "#ffd600");
-            });
-            $(document).on("click", ".not", function(){
-                $(".lista li:not(:eq(3) )").not().css("background", "#d7ccc8");
-            });
-            $(document).on("click", ".texto", function(){
-                $("li:contains('elemento')").css("background", "#ffab91");
-            });
-            $(".figura_1").click(function(){
-                $(".figura_1").css({"background":"#e1bee7","color":"#fff"});
-            });
-            $(".figura_2").dblclick(function(){
-                $(".figura_2").css({"background":"#ba68c8","color":"#fff"});
-            });
-            $(".figura_3").focus(function(){
-                $(".figura_3").css({"background":"#9c27b0","color":"#fff"});
-            });
-            $(".figura_3").blur(function(){
-                $(".figura_3").css({"background":"#663399","color":"#fff"});
-            });
-            $(".figura_4").focusin(function(){
-                $(".figura_4").css({"background":"#ea80fc","color":"#fff"});
-            });
-            $(".figura_4").focusout(function(){
-                $(".figura_4").css({"background":"#663399","color":"#fff"});
-            });
-            $(".figura_5").mousedown(function(){
-                $(".displa_msj").text('mousedown');
-            });
-            $(".figura_5").mouseup(function(){
-                $(".displa_msj").text('mouseup');
-            });
-            $(".figura_6").mouseover(function(){
-                $(".msj").text('mouseover');
-            });
-            $(".figura_6").mouseout(function(){
-                $(".msj").text('mouseout');
-            });
-
-
-
-
-
-            $(document).on("click", ".animate", function(){
-                $(".cuadrado_1").animate({
-                    right: '250px',
-                    opacity: '0.5',
-                    height: '150px',
-                    width: '150px'
-                });
-                setTimeout(function(){  
-                    $(".cuadrado_1").remove();
-                    $(".wrapper_animations").append('<div class="cuadrado cuadrado_1"></div>');
-                }, 1000);
-            });
-            $(document).on("click", ".fadeIn", function(){
-                $(".cuadrado_2").fadeIn(3000);
-                setTimeout(function(){  
-                    $(".cuadrado_2").remove();
-                    $(".wrapper_animations").append('<div class="cuadrado cuadrado_2"></div>');
-                }, 3000);
-            });
-            $(document).on("click", ".fadeOut", function(){
-                $(".cuadrado_3").fadeOut(3000);
-                setTimeout(function(){  
-                    $(".cuadrado_3").remove();
-                    $(".wrapper_animations").append('<div class="cuadrado cuadrado_3"></div>');
-                }, 3000);
-            });
-            $(document).on("click", ".fadeToggle", function(){
-                $(".cuadrado_4").fadeToggle('quick');
-            });
-            $(document).on("click", ".ocultar", function(){
-                $(".cuadrado_5").hide('quick');
-            });
-            $(document).on("click", ".mostrar", function(){
-                $(".cuadrado_6").show('quick');
-            });
-
-            
-
-            
-        
-            
-            
-        </script>
+        <script type="text/javascript" src="js/tema_3.js"></script>
     </body>
 </html>
