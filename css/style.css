@@ -29,3 +29,80 @@ figure.figura {
     color: #ad1457;
     border: solid 2px #ad1457;
 }
+.lista li{
+    border: solid 1px #000;
+    margin: 5px;
+    padding: 2px;
+}
+.circulo {
+    background: rebeccapurple;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 40px;
+    border-radius: 50%;
+    color: #fff;
+    padding: 25px;
+    padding-top: 120px;
+}
+.figura_name {
+    font-size: 14px;
+    margin-top: 10px;
+}
+.circulo.figura_5 {
+    line-height: 20px;
+    padding-top: 120px;
+}
+.displa_msj {
+    font-size: 20px;
+    margin-top: 15px;
+}
+.wrapper_animations {
+    border: solid 1px;
+    height: 300px;
+    position: relative;
+}
+.cuadrado_1{
+    background: #ec407a;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+}
+.cuadrado_2{
+    left:90px;
+    width:80px;
+    height:80px;
+    display:none;
+    background:blue;
+    position: absolute;
+}
+.cuadrado_3{
+    left:180px;
+    width:80px;
+    height:80px;
+    background:blue;
+    position: absolute;
+}
+.cuadrado_4{
+    left:270px;
+    width:80px;
+    height:80px;
+    background:blue;
+    position: absolute;
+}
+.cuadrado_5{
+    left:360px;
+    width:80px;
+    height:80px;
+    background:blue;
+    position: absolute;
+}
+.cuadrado_6{
+    left:450px;
+    width:80px;
+    height:80px;
+    background:blue;
+    position: absolute;
+    display: none;
+}
